@@ -2,7 +2,7 @@
 
 This is the official repository for UniASM, which is a pre-train Language model for Binary Code Similarity Detection (BCSD) tasks. Currently supported platforms: x86_64.
 
-You can find the pre-trained model at [kaggle](https://www.kaggle.com/datasets/littledj/uniasm-pretrained-model/download?datasetVersionNumber=1): 
+You can find the pre-trained model at [kaggle](https://www.kaggle.com/datasets/littledj/uniasm-pretrained-model/download?datasetVersionNumber=1). 
 
 
 
