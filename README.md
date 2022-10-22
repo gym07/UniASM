@@ -15,6 +15,7 @@ This implementation is based on [bert4keras](https://github.com/bojone/bert4kera
 ## Requirements:
 
 - Tensorflow >= 2.4
+- python3
 - Radare2 (optional, for ASM files generation)
 
 
@@ -30,23 +31,23 @@ python bin2asm.py -i testdata\bin\elfedit-gcc-o0 -o testdata\out-elfedit-gcc-o0
 ## 2. Generate embedding for ASM function
 
 ```
-python embedding.py testdata\bfd_coff_gc_keep
+python embedding.py testdata\out-elfedit-gcc-o0\dbg.adjust_relative_path
 ```
 
 outputs:
 
 ```
 100%|███████████████████████████████████| 1/1 [00:00<?, ?it/s]
-[ 0.10191602  0.9945721   0.99785066  0.9999895  -0.9999946   0.585041
-  0.16400526  0.39048684 -0.982188   -0.9025699   0.9975684  -0.99533683
+[ 0.71376026  0.9913202  -0.8564607   0.928958    0.674275    0.2007347
+  0.9964851  -0.9999651  -0.99792427 -0.9964269   0.6482425  -0.99827206
   ...
- -0.26505318  0.9999827   0.999393   -0.99974316  0.33585668 -0.96132857
-  0.97931385 -0.96559024  0.04376203 -0.9998853  -0.9984222   0.7902496 ]
+ -0.38122872 -0.99985945  0.9994267   0.8081971   0.97346854  0.9234201
+ -0.58380216  0.90942395  0.99129915 -0.99984354 -0.05967106  0.9671064 ]
 ```
 
 
 
-## 3. Calculate similarity for two ASM functions
+## 3. Calculate the similarity of two ASM functions
 
 ```
 python similarity.py testdata\out-elfedit-gcc-o0\dbg.adjust_relative_path testdata\out-elfedit-gcc-o1\dbg.adjust_relative_path
@@ -57,7 +58,7 @@ outputs:
 ```
 100%|███████████████████████████████████| 1/1 [00:00<00:00, 977.01it/s]
 100%|███████████████████████████████████| 1/1 [00:00<00:00, 972.25it/s]
-0.95588565
+0.91649896
 ```
 
 
