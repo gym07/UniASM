@@ -20,6 +20,16 @@ This implementation is based on [bert4keras](https://github.com/bojone/bert4kera
 
 
 
+We use the following commands to initialize the conda environment:
+
+```
+conda create -n uniasm python=3.8
+conda activate uniasm
+pip install numpy==1.19.5 tensorflow==2.5.0 bert_pytorch scikit-learn==1.2.0 pandas==1.4.4 transformers==4.25.1 matplotlib==3.6.2 tqdm
+```
+
+
+
 ## 1. Generate ASM files
 
 ```
@@ -62,4 +72,20 @@ outputs:
 ```
 
 
+
+## 4. Re-train UniASM
+
+**Step 1**, create the training dataset.
+
+```
+python train_dataset.py
+```
+
+
+
+**Step 2**, train the model.
+
+```
+python train.py
+```
 
